@@ -11,6 +11,7 @@ The MNIST database of handwritten digits, available from this page, has a traini
 6.	Split training and valdiation set
 
 7.	The Approach:
+
 Model 1: Based on SGD optimizer
 •	Layers – Input layer, 4 hidden layers, Output layer
 
@@ -29,6 +30,7 @@ Model 1: Based on SGD optimizer
 •	Loss - categorical_crossentropy
 
 Model 1 delivered val_acc = 0.9651
+
 
 
 Model 2: Based on ADAM optimizer, while retaining the rest of the parameters as Model 1
@@ -54,6 +56,7 @@ Model 2 delivered val_acc = 0.9781
 Since ADAM optimizer delivered a better accuracy, we retain ADAM in the next model and evaluate with different “learning_rate” i.e. 0.01 and 0.5
 
 
+
 Model 2a: Based on ADAM optimizer, and “learning_rate” = 0.01
 
 •	Layers – Input layer, 4 hidden layers, Output layer
@@ -73,6 +76,7 @@ Model 2a: Based on ADAM optimizer, and “learning_rate” = 0.01
 •	Loss - categorical_crossentropy
 
 Model 2a delivered val_acc = 0.9800
+
 
 
 Model 2b: Based on ADAM optimizer, and “learning_rate” = 0.5
@@ -102,6 +106,7 @@ We proceed to fit a neural network with 5 hidden layers with the features in the
 To ensure that the two models are comparable, we will set the training epochs as 20, and the training batch size as 100.
 
 
+
 Model 3: Based on ADAM optimizer, and “learning_rate” = 0.1,  5 hidden layers
 
 •	Layers – Input layer, 5 hidden layers, Output layer
@@ -127,6 +132,7 @@ However, there are computational costs (in terms of complexity) in implementing 
 Given that the benefits of an additional layer are low while the costs are high, we will stick with the 4 layer neural network.
 
 We now proceed to include dropout (dropout rate of 0.3) in our second model to prevent overfitting.
+
 
 
 Model 4: Based on ADAM optimizer, and “learning_rate” = 0.1,  4 hidden layers, 3 Dropout (0.3) layers
